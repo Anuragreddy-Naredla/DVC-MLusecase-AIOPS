@@ -1,3 +1,4 @@
+from operator import index
 import yaml
 import os
 
@@ -18,3 +19,6 @@ def create_dir(dirs:list):
         os.makedirs(dir_path, exist_ok=True)
         print(f"directories is created at {dir_path}")
         
+def save_local_df(data, data_path, index_status = False):
+    data.to_csv(data_path, index = index_status)
+    print(f"data is saved at {data_path}")
