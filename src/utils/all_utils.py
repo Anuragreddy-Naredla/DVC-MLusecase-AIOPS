@@ -1,7 +1,8 @@
 from operator import index
+from textwrap import indent
 import yaml
 import os
-
+import json
 def read_yaml(path_to_yaml: str) -> dict:
     """
     This function is used to read the yaml file.
@@ -22,3 +23,9 @@ def create_dir(dirs:list):
 def save_local_df(data, data_path, index_status = False):
     data.to_csv(data_path, index = index_status)
     print(f"data is saved at {data_path}")
+
+def save_reports(report, reports_path):
+    with open(reports_path, "w") as f:
+        json.dump(report, f, indent = 4)
+    print(f"reports are saved at {reports_path}")
+
