@@ -9,3 +9,12 @@ def read_yaml(path_to_yaml: str) -> dict:
         content = yaml.safe_load(yaml_file)
 
     return content
+
+def create_dir(dirs:list):
+    """
+    This function is used to create directories from list.
+    """
+    for dir_path in dirs:
+        os.makedirs(dir_path, exist_ok=True)
+        print(f"directories is created at {dir_path}")
+        
