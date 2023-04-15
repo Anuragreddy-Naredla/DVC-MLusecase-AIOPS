@@ -1,9 +1,9 @@
-from operator import index
-import os
+
 
 from src.utils.all_utils import read_yaml, create_dir
 import argparse
 import pandas as pd
+import os
 
 def get_data(config_path):
     config = read_yaml(config_path)
