@@ -11,7 +11,6 @@ def get_data(config_path):
     remote_data_path = config["data_source"]
 
     df = pd.read_csv(remote_data_path, sep = ";")
-    print(df.head())
 
     # save data in local dir
     # create path to dir:artifacts/raw_local_dir/data.csv
